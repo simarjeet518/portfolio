@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import Profile from '../components/Profile';
+
 
 function Home() {
   return (
     <div>
-      <h1>This is home page</h1>
+      <Profile />
     </div>
   )
 }
