@@ -8,12 +8,6 @@ import styled from 'styled-components';
 import {Github} from '@styled-icons/boxicons-logos/Github'
 import {LinkedinSquare} from '@styled-icons/boxicons-logos/LinkedinSquare';
 
-
-
-// const GitHub = styled(git)`
-//   color: red;
-// `
-
 const ProfileStyles = styled.div`
   .profile {
     height: 100vh;

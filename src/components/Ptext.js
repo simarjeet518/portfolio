@@ -2,20 +2,27 @@ import React from 'react';
 import styled from 'styled-components';
 
 const PStyle = styled.div`
-  // max-width: 500px;
-  margin: 0 auto;
+  margin 0 auto;
   text-align: left;
   font-size: 1.8rem;
   line-height: 1.3em;
+  .para{
+    margin-top:0;
+  }
+  .hide {
+    margin-top:35rem;
+  } 
   @media only screen and (max-width: 768px) {
     font-size: 1.7rem;
+   
   }
 `;
 
-export default function Ptext({ children }) {
+export default function Ptext(props) {
+ 
   return (
-    <PStyle className="para">
-      <p>{children}</p>
+    <PStyle className={props.showContacts ? 'hide' :'para'}>
+      <p>{props.children}</p>
     </PStyle>
   );
 }

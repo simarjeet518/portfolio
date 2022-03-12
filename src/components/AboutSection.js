@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState}from 'react';
 import styled from 'styled-components';
 import PText from './Ptext';
 import AboutImg from '../assets/images/AboutImg.jpg';
@@ -65,7 +65,7 @@ const AboutSectionStyles = styled.div`
       margin-left:70px;
     }
     aboutSection__left {
-     
+      position: relative;
       margin-top:-3rem;
     }
     .section-title {
@@ -85,15 +85,17 @@ const AboutSectionStyles = styled.div`
 `;
 
 function AboutSection() {
+  const [showContacts, setShowContacts] = useState(false);
+
   return (
     <AboutSectionStyles>
       <div className="container">
       <div className="aboutSection__left">
           <img className="aboutImg" src={AboutImg} alt="Img" />
-          <Contact />
+          <Contact showContacts={showContacts} setShowContacts={setShowContacts}/>
       </div>
         <div className="aboutSection__right">
-          <PText>
+          <PText showContacts={showContacts} >
            Hello , my name is Simarjeet  and i am a Full Stack Developer based in Vancouver, BC. I love solving problems with unique algorithms, curious, driven and always looking to improve my abilities, not afraid to step out of my comfort Zone, ready to face new challanges and learn from my failures.<br /><br />
 
            My journey to become a developer started with covid, When i started spending my free time in coding, by the time coding became my passion and finally decided to turn it into career.I started studying coding Full-time and joined lighthouse labs Full Stack Web Developemt Bootcamp.< br /><br />

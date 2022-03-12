@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import {Github} from '@styled-icons/boxicons-logos/Github'
 import {LinkedinSquare} from '@styled-icons/boxicons-logos/LinkedinSquare';
@@ -12,12 +12,13 @@ import {MdClose} from 'react-icons/md'
 const ContactStyle = styled.div`
 .contact__details{
   font-size:2rem;
-  padding:5px;
+  padding:6px;
 }
  .profile__social {
     width:100%;
     display:flex;
     flex-direction:column
+    
   }
   .linkedln{
    padding-left:20px;
@@ -53,18 +54,47 @@ const ContactStyle = styled.div`
       display: block;
     }
     .hide-item{
-      transform: translateY(calc(-100% - var(--top)));
+      --top:41rem;
+      transform: translateX(calc(-100% - var(--top)));
+       
+    }
+    .contact__details {
+      font-size: 1.8rem;
     }
     .mobile-menu-icon{
       display:block; 
     }
+    .profile__social {
+      --top: 41rem;
+      transition: .3s linear ;
+      background-color: var(--deep-dark);
+      padding:1rem;
+      text-align:left;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 12px;
+      position: absolute;
+      right:2rem;
+      .social__Links{
+        padding-bottom:3rem;
+      }
+      
+      .closeNavIcon {
+        display: block;
+        width: 3rem;
+        margin 0 0 0 auto;
+        cursor: pointer;
+        * {
+          pointer-events: none;
+        }
+      }
     
   }
 
 `;
 
-function Contact() {
-  const [showContacts, setShowContacts] = useState(false);
+function Contact(props) {
+  const {showContacts, setShowContacts} = props;
 
   return (
     <ContactStyle>
