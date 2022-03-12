@@ -1,9 +1,10 @@
 import React from 'react'
+import AboutSection from '../components/AboutSection'
 
 function About() {
   return (
     <div>
-      <h1>This is about page</h1>
+      <AboutSection />
     </div>
   )
 }

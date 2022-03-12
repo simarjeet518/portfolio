@@ -158,18 +158,16 @@ function Profile() {
       <div className='profile'>
         <div className='container'>
           <h1 className='profile__heading'>
-            {/* <span>Hello, This is Simar</span>
-            <span className="profile__name">Simar</span> */}
-            <PText>Hi,I'm Simar</PText><br /><br />
-            <PText>Welcome to my Portfolio!</PText>
+            <span>Hello, This is </span>
+            <span className="profile__name">Simar</span>
           </h1> 
           <div className='profile__img'>
             <img src={profileImg} alt="/"/>
           </div>
-          {/* <div className='profile__info'>
+          <div className='profile__info'>
           <PText>Welcome to my site !</PText>
           <Button btnText="see my works" btnLink="/projects" outline={false}/>
-          </div> */}
+          </div>
 
           <div className="profile__social">
             <div className='profile__social__indicator'>

@@ -5,6 +5,7 @@ import {MdMenu , MdClose} from 'react-icons/md'
 
 const NavMenuStyles = styledComponents.div`
  text-decoration:none;
+  align-items:right;
   position: fixed;
   top:0;
   left:0;
@@ -14,7 +15,7 @@ const NavMenuStyles = styledComponents.div`
   background: var(--dark-bg);
   ul{
     max-width: 1200px;
-    margin:0 auto;
+    margin-right:2px;
     width: 90%;
     text-align:center;
     li{
