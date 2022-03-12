@@ -5,19 +5,17 @@ import {MdMenu , MdClose} from 'react-icons/md'
 
 const NavMenuStyles = styledComponents.div`
  text-decoration:none;
-  align-items:right;
   position: fixed;
-  top:0;
-  left:0;
+  top:0; 
   width:100%;
   padding: 1rem 0;
   z-index: 100;
   background: var(--dark-bg);
   ul{
     max-width: 1200px;
-    margin-right:2px;
+    right:0;
     width: 90%;
-    text-align:center;
+    text-align:right;
     li{
       display:inline-block;
       border-radius: 8px;
@@ -54,6 +52,12 @@ const NavMenuStyles = styledComponents.div`
   .closeNavIcon {
     display: none;
   }
+  .menu {
+    width:100%;
+    height:100%;
+    object-fit=cover;
+  }
+
 
   @media only screen and (max-width: 768px) {
     padding: 0;
@@ -108,7 +112,7 @@ export default function NavMenu(){
       onKeyDown={() => setShowNav(!showNav)}
       tabIndex={0}
       >
-      <MdMenu />
+      <MdMenu className='menu'/>
       </div>
       <ul className={!showNav ? 'navItems hide-item' :'navItems'}>
         <div className="closeNavIcon"
@@ -117,18 +121,8 @@ export default function NavMenu(){
         onKeyDown={() => setShowNav(!showNav)}
         tabIndex={0}
         >
-          <MdClose />
+          <MdClose className='menu'/>
         </div>
-        <li>
-          <NavLink to="/"
-          onClick={() => setShowNav(!showNav)}
-          role="button"
-          onKeyDown={() => setShowNav(!showNav)}
-          tabIndex={0}
-          >
-            Home
-          </NavLink>
-        </li>
         <li>
           <NavLink to="/about" 
           onClick={() => setShowNav(!showNav)}
@@ -149,16 +143,7 @@ export default function NavMenu(){
             Projects
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/contact"
-          onClick={() => setShowNav(!showNav)}
-          role="button"
-          onKeyDown={() => setShowNav(!showNav)}
-          tabIndex={0}
-          >
-            Contact
-          </NavLink>
-        </li>
+      
       </ul>
     </NavMenuStyles>
   )

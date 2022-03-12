@@ -1,12 +1,8 @@
 import React from 'react';
-import SectionTitle from './SectionTitle';
 import styled from 'styled-components';
-import Button from './Button';
 import PText from './Ptext';
 import AboutImg from '../assets/images/AboutImg.jpg';
-import profileImg from '../assets/images/profile.jpeg';
-import {Github} from '@styled-icons/boxicons-logos/Github'
-import {LinkedinSquare} from '@styled-icons/boxicons-logos/LinkedinSquare';
+import Contact from './Contact';
 
 const AboutSectionStyles = styled.div`
   padding: 10rem 0;
@@ -14,49 +10,17 @@ const AboutSectionStyles = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    // text-align: left;
     margin-left:10%;
   }
   .aboutSection__left,
   .aboutSection__right {
     flex: 1;
   }
-  // .aboutSection__right {
-  //   margin-left: -400px;
-  // }
+ 
   .aboutSection__right {
     margin-left:-300px;
-  }
-  .profile__social,
-  .profile__scrollDown {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    position: absolute;
-    bottom: 20px;
-    width: 50px;
-  }
-  .profile__social {
-    left: 50px;
-  }
-  .profile__scrollDown {
-    right: 50px;
-  }
-  .profile__social__indicator,
-  .profile__scrollDown {
-    width: 50px;
-    p {
-      font-size: 1.6rem;
-      transform: translateY(-70px) rotate(90deg);
-      letter-spacing: 0.7rem;
-      text-transform: uppercase;
-    }
-    img {
-      max-height: 45px;
-      width: 16px;
-      margin: 0 auto;
-      object-fit: contain;
-    }
+    display:flex;
+
   }
  
   }
@@ -72,7 +36,9 @@ const AboutSectionStyles = styled.div`
    height: 300px;
    border-radius:50%;
    padding-bottom:10px;
+   object-fit: cover;
   }
+  
 
   @media only screen and (max-width: 950px) {
     .aboutSection__left {
@@ -124,30 +90,7 @@ function AboutSection() {
       <div className="container">
       <div className="aboutSection__left">
           <img className="aboutImg" src={AboutImg} alt="Img" />
-          <div className="profile__social">
-            <div className='profile__social__indicator'>
-              <p>Follow</p>
-            </div>
-            <div class="profile__social__text">
-              <ul>
-                <li>
-                  <a href="https://www.linkedin.com/in/simarjeet-kaur-518h/"
-                  target="_blank"
-                  rel="noreferrer"
-                   > 
-                  <LinkedinSquare />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/simarjeet518" target="_blank"
-                  rel="noreferrer"
-                   >
-                    <Github />
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <Contact />
       </div>
         <div className="aboutSection__right">
           <PText>
