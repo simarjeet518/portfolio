@@ -124,7 +124,7 @@ export default function NavMenu(){
           <MdClose className='menu'/>
         </div>
         <li>
-          <NavLink to="/about" 
+          <NavLink to="/" 
           onClick={() => setShowNav(!showNav)}
           role="button"
           onKeyDown={() => setShowNav(!showNav)}
