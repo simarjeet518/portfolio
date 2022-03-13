@@ -10,8 +10,15 @@ import 'swiper/swiper-bundle.min.css';
 SwiperCore.use([Navigation]);
 
 const ProjectSectionStyle = styled.div`
-  padding: 10rem 0;
+  padding: 8rem 0;
+  
+ .set__margin {
+   margin-top:-4rem;
+   padding:0 3rem;
+ }
   .projects__allItems {
+    margin-left:2rem;
+    margin-right:2rem;
     display: flex;
     gap: 3rem;
     margin-top: 5rem;
@@ -42,6 +49,7 @@ const ProjectSectionStyle = styled.div`
     font-size: 2rem;
   }
   @media only screen and (max-width: 768px) {
+   
     .projects__allItems {
       flex-direction: column;
       max-width: 400px;
@@ -63,7 +71,8 @@ export default function ProjectsSection() {
         <SectionTitle subheading="some of my recent works" heading="Projects" />
         <div className="projects__allItems">
           <Swiper
-            spaceBetween={30}
+            className="set__margin"
+            spaceBetween={35}
             slidesPerView={1}
             navigation
             breakpoints={{
@@ -73,22 +82,24 @@ export default function ProjectsSection() {
               },
               // when window width is >= 768px
               768: {
-                slidesPerView: 2,
+                slidesPerView: 1,
               },
               // when window width is >= 1200px
               1200: {
-                slidesPerView: 3,
+                slidesPerView: 2,
               },
             }}
           >
             {projects.map((project, index) => {
-              if (index >= 5) return;
+              if (index >= 6) return;
               return (
-                <SwiperSlide key={project.id}>
+                <SwiperSlide key={project.id}  >
                   <ProjectItem
                     title={project.name}
+                    techStack={project.techStack}
                     img={project.img}
                     desc={project.desc}
+                    link={project.link}
                   />
                 </SwiperSlide>
               );
