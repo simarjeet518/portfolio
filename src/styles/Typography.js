@@ -22,6 +22,7 @@ const Typography = createGlobalStyle`
   html{
     font-family: 'RobotoMono Regular';
     // color: var(--gray-1);
+    
   }
   *{
     font-family: 'RobotoMono Regular';

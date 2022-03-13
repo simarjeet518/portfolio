@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import ProjectSection from '../components/ProjectSection';
 
 function Projects() {
   return (
     <div>
-      <h1>This is projects page</h1>
+      <ProjectSection />
     </div>
   )
 }

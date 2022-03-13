@@ -62,7 +62,7 @@ const ContactStyle = styled.div`
        
     }
     .contact__details {
-      font-size: 1.8rem;
+      font-size: 2rem;
       color: var(--gray-1);
     }
     .mobile-menu-icon{

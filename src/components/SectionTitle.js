@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SectionTitleStyle = styled.div`
+  color: var(--gray-1);
   text-align: center;
   p {
     font-family: 'RobotoMono Regular';
@@ -9,7 +10,7 @@ const SectionTitleStyle = styled.div`
   }
   h2 {
     font-family: 'Montserrat Bold';
-    font-size: 6rem;
+    font-size: 5rem;
     margin-top: 0.5rem;
     text-transform: uppercase;
   }
@@ -30,7 +31,7 @@ function SectionTitle({
 }) {
   return (
     <SectionTitleStyle className="section-title">
-      <p>{subheading}</p>
+     
       <h2>{heading}</h2>
     </SectionTitleStyle>
   );
