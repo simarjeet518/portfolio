@@ -6,6 +6,7 @@ const PStyle = styled.div`
   text-align: left;
   font-size: 1.8rem;
   line-height: 1.3em;
+  color: var(--gray-1);
   .para{
     margin-top:0;
   }

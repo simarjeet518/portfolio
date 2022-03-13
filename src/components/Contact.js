@@ -13,6 +13,7 @@ const ContactStyle = styled.div`
 .contact__details{
   font-size:2rem;
   padding:6px;
+  color: var(--gray-1);
 }
  .profile__social {
     width:100%;
@@ -40,6 +41,7 @@ const ContactStyle = styled.div`
     cursor: pointer;
     display: none;
     outline:none;
+    color: var(--gray-1);
 }
 .closeNavIcon {
   display: none;
@@ -48,6 +50,7 @@ const ContactStyle = styled.div`
   width:100%;
   height:100%;
   object-fit=cover;
+  color: var(--gray-1);
 }
   @media only screen and (max-width: 768px) {
     .closeNavIcon {
@@ -60,6 +63,7 @@ const ContactStyle = styled.div`
     }
     .contact__details {
       font-size: 1.8rem;
+      color: var(--gray-1);
     }
     .mobile-menu-icon{
       display:block; 
@@ -104,7 +108,7 @@ function Contact(props) {
       onKeyDown={() => setShowContacts(!showContacts)}
       tabIndex={0}
       >
-        <Contacts size={35} BackgroundColor="red"/>Contacts
+        <Contacts size={35} color="#0a66c2"/>Contacts
       </div>
 
     <div className={!showContacts ? 'profile__social hide-item' :'profile__social'}> 
@@ -117,11 +121,11 @@ function Contact(props) {
           <MdClose className='menu'/>
       </div>     
       <span className='contact__details'>
-        <PhoneFill size={35} color="red"/> +17788334525
+        <PhoneFill size={35} color="#grey"/> +17788334525
       </span>
   
       <span className='contact__details'>
-        <Email size={35} BackgroundColor="red"/> kaursimarjeet2406@gmail.com
+        <Email size={35} color="#ff5722"/> kaursimarjeet2406@gmail.com
       </span>
 
       <span className='contact__details'>
@@ -129,7 +133,7 @@ function Contact(props) {
         target="_blank"
         rel="noreferrer"
         >
-          <DocumentLink size={35} /> Resume
+          <DocumentLink size={35} color="#2e8686"/><span className='contact__details'> Resume</span>
         </a>
       </span >
 
@@ -141,12 +145,12 @@ function Contact(props) {
         rel="noreferrer"
         className="linkedln"
         > 
-          <LinkedinSquare size={35}/>
+          <LinkedinSquare size={35} color="#0a66c2"/>
         </a>
         <a href="https://github.com/simarjeet518" target="_blank"
         rel="noreferrer"
         >
-         <Github size={35}/>
+         <Github size={35} color="#ffffff"/>
         </a>
       </div>
     </div>

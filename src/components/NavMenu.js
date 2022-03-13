@@ -56,6 +56,7 @@ const NavMenuStyles = styledComponents.div`
     width:100%;
     height:100%;
     object-fit=cover;
+    color: var(--gray-1);
   }
 
 
