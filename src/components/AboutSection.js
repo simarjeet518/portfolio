@@ -6,6 +6,14 @@ import Contact from './Contact';
 
 const AboutSectionStyles = styled.div`
   padding: 10rem 0;
+  .section__name {
+      font-family: 'Montserrat Bold';
+      font-size: 3rem;
+      margin-top: 0.5rem;
+      color: var(--gray-1);
+      margin-bottom:2rem;
+      margin-left:4rem;
+  }
   .container {
     display: flex;
     align-items: center;
@@ -92,13 +100,17 @@ function AboutSection() {
       <div className="container">
       <div className="aboutSection__left">
           <img className="aboutImg" src={AboutImg} alt="Img" />
+          <h2 className="section__name">Simarjeet Kaur</h2>
           <Contact showContacts={showContacts} setShowContacts={setShowContacts}/>
       </div>
         <div className="aboutSection__right">
           <PText showContacts={showContacts} >
-           Hello , my name is Simarjeet  and i am a Full Stack Developer based in Vancouver, BC. I love solving problems with unique algorithms, curious, driven and always looking to improve my abilities, not afraid to step out of my comfort Zone, ready to face new challanges and learn from my failures.<br /><br />
+           I am a Full Stack Developer based in Vancouver, BC. I love solving problems with unique algorithms, curious, driven and always looking to improve my abilities.<br /><br />
 
-           My journey to become a developer started with covid, When i started spending my free time in coding, by the time coding became my passion and finally decided to turn it into career.I started studying coding Full-time and joined lighthouse labs Full Stack Web Developemt Bootcamp.< br /><br />
+           My journey to become a developer began during covid, When i started spending my free time in coding, by the time coding became my passion and finally decided to turn it into career.I started studying coding Full-time and later joined lighthouse labs Full Stack Web Developemt Bootcamp.< br /><br />
+
+
+           I am not afraid of trying new things and failures, always believe "<em>Shoot for the moon. Even if you miss, you’ll land among the stars."</em><br /><br />
           
           I'm  now seeking a full-time position and would be really happy if we can discuss what i can bring to your team.< br /><br />
 
